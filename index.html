@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>To-Do List</title>
+  </head>
+<!-- Made with TailwindCSS -->
+
+  <body class="flex justify-center items-center h-screen bg-yellow-50">
+    <!-- Main Container For All The To-Do List Content -->
+    <div
+      id="main"
+      class="bg-white w-1/4 h-auto text-center text-black shadow-lg p-7 "
+    >
+    <!-- Container for Date -->
+      <div class="flex justify-between items-center mb-4">
+        <!-- Container for Calender Date -->
+        <div class="flex">
+          <h1 class="text-5xl font-bold mr-2">28</h1>
+          <!-- Container for Month/Year Date -->
+          <div class="flex flex-col">
+            <p class="uppercase font-bold">Feb</p>
+            <p class="font-thin">2023</p>
+          </div>
+        </div>
+        <!-- Container for Day -->
+        <div class="uppercase text-base">Tuesday</div>
+      </div>
+      <!-- Container for input & Button  -->
+      <div id="input-container" class="flex justify-between mb-4">
+        <input id="input-todo" type="text" placeholder="Enter To Do" class="outline-none p-2 border border-neutral-200 w-full mr-4">
+        <button id="add" class="bg-green-300 px-4 py-3 group rounded-full hover:bg-black duration-500">
+            <i class="fa-solid fa-plus text-red-500 group-hover:text-white"></i>
+          </button>
+      </div>
+      <!-- Error Message if USer leaves input blank -->
+      <div id="show-error" class="text-red-500 text-start italic text-xs ml-1"></div>
+      <!-- This is used to display the values of the input that the user typed in -->
+      <div id="todo-list"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
